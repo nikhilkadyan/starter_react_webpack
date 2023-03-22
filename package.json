@@ -1,0 +1,35 @@
+{
+    "name": "starter_react_webpack",
+    "version": "1.0.0",
+    "description": "React starter template with webpack & Service worker",
+    "main": "index.js",
+    "scripts": {
+        "dev": "webpack-dev-server",
+        "build": "webpack",
+        "serve": "webpack && http-server dist"
+    },
+    "keywords": [
+        "react",
+        "webpack",
+        "service",
+        "worker"
+    ],
+    "author": "Nikhil Kadyan",
+    "license": "ISC",
+    "dependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.21.3",
+        "@babel/preset-env": "^7.20.2",
+        "@babel/preset-react": "^7.18.6",
+        "babel-loader": "^9.1.2",
+        "html-webpack-plugin": "^5.5.0",
+        "http-server": "^14.1.1",
+        "webpack": "^5.76.2",
+        "webpack-cli": "^5.0.1",
+        "webpack-dev-server": "^4.13.1",
+        "workbox-webpack-plugin": "^6.5.4"
+    }
+}
