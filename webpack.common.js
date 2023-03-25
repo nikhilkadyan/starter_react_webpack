@@ -3,11 +3,18 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-    mode: 'development',
     entry: './src/index.js',
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './public/index.html',
+            filename: 'index.html',
+            inject: 'body'
+        }),
+    ],
     output: {
         path: path.resolve('dist'),
-        filename: 'index_bundle.js'
+        filename: '[name].bundle.js',
+        clean: true,
     },
     module: {
         rules: [
@@ -28,16 +35,5 @@ module.exports = {
                 use: 'babel-loader'
             }
         ]
-    },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: './public/index.html',
-            filename: 'index.html',
-            inject: 'body'
-        }),
-        new WorkboxPlugin.GenerateSW({
-            clientsClaim: true,
-            skipWaiting: true,
-        }),
-    ]
+    }
 }
