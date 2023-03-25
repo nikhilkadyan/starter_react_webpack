@@ -10,7 +10,7 @@ Workbox: Webpack Plugin - 6.5.4
 In the project directory, you can run:
 
 ### `npm run dev`
-Runs the app in the development mode @ [http://localhost:3000](http://localhost:3000) in your browser.
+Runs the app in the development mode in your browser.
 
 ### `npm run build`
 Build output files in dist folder
